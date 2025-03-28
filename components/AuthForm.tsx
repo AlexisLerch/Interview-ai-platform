@@ -37,11 +37,11 @@ const AuthForm = ({ type }: { type: FormType }) => {
   function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       if (type === "sign-up") {
-        toast.success('Account created successfully. Please sign in.')
-        router.push('/sign-in')
+        toast.success("Account created successfully. Please sign in.");
+        router.push("/sign-in");
       } else {
-        toast.success('Sign in successfully.')
-        router.push('/')
+        toast.success("Sign in successfully.");
+        router.push("/");
       }
     } catch (error) {
       console.log(error);
@@ -73,20 +73,20 @@ const AuthForm = ({ type }: { type: FormType }) => {
                 placeholder="Your Name"
               />
             )}
-             <FormField
-                control={form.control}
-                name="email"
-                label="Email"
-                placeholder="Your email address"
-                type="email"
-              />
-             <FormField
-                control={form.control}
-                name="password"
-                label="Password"
-                placeholder="Enter your password"
-                type="password"
-              />
+            <FormField
+              control={form.control}
+              name="email"
+              label="Email"
+              placeholder="Your email address"
+              type="email"
+            />
+            <FormField
+              control={form.control}
+              name="password"
+              label="Password"
+              placeholder="Enter your password"
+              type="password"
+            />
 
             <Button className="btn" type="submit">
               {" "}
